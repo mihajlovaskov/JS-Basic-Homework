@@ -1,0 +1,18 @@
+var denar = 1000;
+console.log(denar);
+console.log(typeof denar);
+var currency = "MKD";
+console.log(currency);
+console.log(typeof currency);
+var check = 1000==5*300-5001;
+console.log(check);
+console.log(typeof check);
+var multi=5000;
+console.log(multi);
+console.log(typeof multi);
+multi="5001";
+console.log(multi);
+console.log(typeof multi);
+multi="5001"===5*1000+1;
+console.log(multi);
+console.log(typeof multi);
