@@ -1,25 +1,15 @@
 function findNumber(number, array){
-    let found = false;
-    for(let listNumbers of array){
-        if(listNumbers == number){
-            found = true;
+    let count = 0
+    for(i=0; i < array.length; i++){
+        if(number == array[i]){
+            count++
         }
     }
-   if(found == true){
-       console.log(`You have ${number} in the array: [${array}]`);
-       let counts = []
-       for (let number of array) {
-        counts[number] = (counts[number] || 0) + 1;
-    }
-    console.log(`There is/are ${counts[number]} occurence/s of number ${number} in the array: [${array}]`);
-   }
-   else{
-    console.log(`You don't have ${number} in the array: [${array}]`);
-   }
+    console.log(`There is/are ${count} occurence/s of number ${number} in array ${array}`);
 }
-let numArray = [5,8,9,7,5,5,5];
+let numArray = [5,8,8,7,5,5,5];
+findNumber(7, numArray);
 findNumber(5,numArray);
-findNumber(9,numArray);
 findNumber(0,numArray);
 
 let numArray2 = [1,2,4,9,3,7,28,4];
