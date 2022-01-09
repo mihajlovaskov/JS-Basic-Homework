@@ -8,6 +8,9 @@ scriptElement[0].before(divElement);
 let divElement2 = document.createElement("div");
 divElement2.setAttribute("class", "myDiv");
 scriptElement[0].before(divElement2);
+let hElement2 = document.createElement("h3");
+divElement2.appendChild(hElement2);
+hElement2.innerText = "receipeName2";
 
 //Unordered list
 function receipe (receipeName, ingredients){
@@ -19,14 +22,14 @@ function receipe (receipeName, ingredients){
     }
 }
 
-let nameOfReceipe = "Delicious pancakes";
-let requiredIngredients = ["flour", "milk", "eggs", "sugar", "salt", "oil"]
+let requiredIngredients = prompt("Enter comma-separated integrients:").split(",");
+let nameOfReceipe = prompt("Enter name of receipe:");
 receipe (nameOfReceipe, requiredIngredients);
 
 //TABLE
-function receipe2 (receipeName, ingredients){ 
-    let name = receipeName;
-    hElement.innerText = name;
+function receipe2 (receipeName2, ingredients){ 
+    let name = receipeName2;
+    hElement2.innerText = name;
     let tableElement = document.createElement("table");
     tableElement.setAttribute("style", "border:1px solid black; width:15%;");
     divElement2.appendChild(tableElement);
@@ -39,8 +42,8 @@ function receipe2 (receipeName, ingredients){
     tableElement+= `${trElement.innerHTML}`;
 }
 
-let nameOfReceipe2 = "Delicious pancakes";
-let requiredIngredients2 = ["flour", "milk", "eggs", "sugar", "salt", "oil"]
+let requiredIngredients2 = prompt("Enter comma-separated integrients:").split(",");
+let nameOfReceipe2 = prompt("Enter name of receipe:");
 receipe2 (nameOfReceipe2, requiredIngredients2);
    
 
