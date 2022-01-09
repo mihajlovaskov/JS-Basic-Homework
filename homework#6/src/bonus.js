@@ -22,7 +22,7 @@ function receipe (receipeName, ingredients){
     }
 }
 
-let requiredIngredients = prompt("Enter comma-separated integrients:").split(",");
+let requiredIngredients = prompt("Enter comma-separated ingredients:").split(",");
 let nameOfReceipe = prompt("Enter name of receipe:");
 receipe (nameOfReceipe, requiredIngredients);
 
@@ -30,6 +30,7 @@ receipe (nameOfReceipe, requiredIngredients);
 function receipe2 (receipeName2, ingredients){ 
     let name = receipeName2;
     hElement2.innerText = name;
+    divElement2.innerHTML+=`Ingredients:`;
     let tableElement = document.createElement("table");
     tableElement.setAttribute("style", "border:1px solid black; width:15%;");
     divElement2.appendChild(tableElement);
@@ -42,7 +43,7 @@ function receipe2 (receipeName2, ingredients){
     tableElement+= `${trElement.innerHTML}`;
 }
 
-let requiredIngredients2 = prompt("Enter comma-separated integrients:").split(",");
+let requiredIngredients2 = prompt("Enter comma-separated ingredients:").split(",");
 let nameOfReceipe2 = prompt("Enter name of receipe:");
 receipe2 (nameOfReceipe2, requiredIngredients2);
    
