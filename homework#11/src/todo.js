@@ -12,8 +12,8 @@ $(document).ready(function(){
         console.log(myCheckArray)
         myUL.append("<li></li>");
         let myLi = $("li").last();
-        myLi.append(`<input class="unchecked" id="${myInputArray.length}" type="checkbox"><label>${myInput.val()}</label>`)
-        let myLabel = $("label")
+        myLi.append(`<input class="unchecked" id="${myInputArray.length}" type="checkbox"><span>${myInput.val()}</span>`)
+        let mySpan = $("span")
         let myCheckbox = $(`.unchecked#${myInputArray.length}`);
         function Todo(myInputArray, myCheckArray) {
             this.myInputArray=myInputArray
@@ -23,8 +23,10 @@ $(document).ready(function(){
         console.log(todoObject);
         $(`.unchecked#${myInputArray.length}`).on("input", function(){
             for (i=0;i<myInputArray.length;i++){   
-                $("label").eq(i).css("text-decoration-line", "line-through");
-                $(`.unchecked`).eq(i).attr("class", "checked");}
+                $("span").eq(i).css("text-decoration-line", "line-through");
+                $(`.unchecked`).eq(i).attr("class", "checked");
+                $(`.checked`).prop("checked", true);
+            }
             for (i=0;i<myLi.length;i++){
                 if(myCheckbox.hasClass("checked")==true){
                     myCheckArray.splice(i-1,1,"completed")}
